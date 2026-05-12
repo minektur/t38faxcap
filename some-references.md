@@ -34,5 +34,6 @@ https://wiki.wireshark.org/T.38
 https://www.escaux.com/docs/DRD_T38Support_AdminGuide.html
 https://sangomakb.atlassian.net/wiki/spaces/WCS/pages/658899001/Wholesale%2BSIP%2BTrunking%2B-%2BT38
 https://netpbm.sourceforge.net/doc/faxformat.html
+https://www.wireshark.org/docs/dfref/t/t38.html
 
 
