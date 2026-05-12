@@ -15,8 +15,8 @@ operating systems if you get the dependencies and virtual environment right.
 
 ## Usage
 
-    $uv run capfax.py -h
-    usage: capfax.py [-h] [-d] [-s] filename.pcap
+    $uv run t38faxcap.py -h
+    usage: t38faxcap.py [-h] [-d] [-s] filename.pcap
 
     Extract t38 page images from fax call in pcap file.
 
@@ -70,3 +70,8 @@ This software expects that your pcap will contain packets for only one phone cal
 in wireshark/tcpdump/tshark.  Alternatively, you can just print out pages interleaved from many faxes in the
 same pcap file, in the order that each image becomes complete with a t4-non-ecm-sig-end packet.
 
+## audio fax extraction
+There is a long-existing, difficult to get/use spandsp test tool (test/fax_decode in the build tree) that can 
+extract fax images from an audio recording of G711 fax calls. (e.g. as extracted with wireshark pcap).  
+
+t38faxcap was created to cover the cases that fax_decode doesn't.  To do both, use both tools. 
