@@ -32,15 +32,15 @@ operating systems if you get the dependencies and virtual environment right.
 ## Method of Operation
 This program works by:
 
-1) It leverages tshark's udp fragment reassembly and the t38 disscector to get T38 payloads from
+1) Leveraging tshark's udp fragment reassembly and the t38 disscector to get T38 payloads from
    sets of udptl packets
 
-2) It removes fax framing/padding and guesses at some metadata (e.g. T4 encoding scheme) which
+2) Removeing fax framing/padding and guesses at some metadata (e.g. T4 encoding scheme) which
    are all probably available in the pcap file in the actual conversation between the fax 
    machines, but instead of digging around for that, I can infer the necessary stuff from the
    data itself
 
-3) Saves the data to a temp file and calls fax2tiff from the libtiff-tools package to convert the
+3) Saving the data to a temp file and calls fax2tiff from the libtiff-tools package to convert the
    T4 RLE encoded data to a normal tiff file in the current working directory, sequentially numbered
    in the order they are found in the PCAP.
 
@@ -50,7 +50,7 @@ fax2tiff -2 -M -o test.tiff captured-data.g3
 
 ## Example
 There is an included example.pcap which has a single fax call in it with a one page fax.  Extract it
-to find my secret message
+to find my secret message.
 
 ## braindead software
 This software is full of ugly hacks that aren't good production code, but which work for me for 
