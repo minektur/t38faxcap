@@ -203,7 +203,7 @@ def main():
 
         encoding = guess_encoding(data)
         if encoding == -1:
-            logging.debug(f"{pkg.number}: error checking encoding format.")
+            logging.debug(f"{pkt.number}: error checking encoding format.")
             continue
 
         fname = f"extract{i}.tif"
