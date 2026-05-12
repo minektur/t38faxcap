@@ -52,16 +52,16 @@ fax2tiff -2 -M -o test.tiff captured-data.g3
 There is an included example.pcap which has a single fax call in it with a one page fax.  Extract it
 to find my secret message.
 
-## braindead software
+## Braindead software
 This software is full of ugly hacks that aren't good production code, but which work for me for 
-the situation I need it in.  For instance, We guess which encoding is used by looking for end-of-page 
+the situation I need it in.  For instance, I guess which encoding is used by looking for end-of-page 
 markers and use that to supply the right command line options to fax2tiff.  Also the pyshark library
 doesn't parse/expose the data I need, at least in an easily usable form, so I grope around in it's
 internals to get the data.  I wouldn't be surprised if this stops working in some future version of pyshark
 in which case I'll have to do things the hard way, but as they say "sufficient unto the day is the 
 evil thereof".
 
-## missing functionality
+## Missing Functionality
 I don't have any examples of T.6 MMR encoding and this software doesn't support it
 
 No support for TPKT over TCP for the same reasons.
@@ -70,7 +70,7 @@ This software expects that your pcap will contain packets for only one phone cal
 in wireshark/tcpdump/tshark.  Alternatively, you can just print out pages interleaved from many faxes in the
 same pcap file, in the order that each image becomes complete with a t4-non-ecm-sig-end packet.
 
-## audio fax extraction
+## Audio Fax Extraction
 There is a long-existing, difficult to get/use spandsp test tool (test/fax_decode in the build tree) that can 
 extract fax images from an audio recording of G711 fax calls. (e.g. as extracted with wireshark pcap).  
 
