@@ -35,7 +35,7 @@ This program works by:
 1) Leveraging tshark's udp fragment reassembly and the t38 disscector to get T38 payloads from
    sets of udptl packets
 
-2) Removeing fax framing/padding and guesses at some metadata (e.g. T4 encoding scheme) which
+2) Removing fax framing/padding and guesses at some metadata (e.g. T4 encoding scheme) which
    are all probably available in the pcap file in the actual conversation between the fax 
    machines, but instead of digging around for that, I can infer the necessary stuff from the
    data itself
